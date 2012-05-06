@@ -49,7 +49,7 @@ SocketEvent.prototype = {
 	 */
 	unobserve: function(fn) {
 		for(var i = 0; i < this.observers.length; i++) {
-			if (this.observers[i] = fn) {
+			if (this.observers[i] == fn) {
 				delete(this.observers[i]);
 			}
 		}
