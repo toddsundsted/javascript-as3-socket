@@ -64,7 +64,7 @@ package com.fijiwebdesign.socketjs
 			_socket.addEventListener(ProgressEvent.SOCKET_DATA, function(e : ProgressEvent) : void {
 						var msg : String = _socket.readUTFBytes(_socket.bytesAvailable);
 						log("Received : " + msg );
-						ExternalInterface.call(scope + "receive", msg);
+						ExternalInterface.call(scope + "receive", escape(msg));
 					}
 				);
 		
